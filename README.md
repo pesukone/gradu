@@ -5,19 +5,14 @@
 
 ### Instructions for teachers to modify this template
 Development version of this template is kept elsewhere and new releases will be directly pushed here.   
-Contact the owners of this project if you wish to contribute to development.
-
-
-
-### Distribute to students
-The idea is to distribute read-only Overleaf link to the students. The students can clone the project for themselves, which creates a private copy to them of this project. This repository should be kept up to date and changes made to all the templates.
+Contact the owners of this project if you wish to contribute to the development.
 
 
 ## Instructions for the students
 
 #### STEP 0 - Clone the thesis template
 
-One template for all thesis:   
+One template for all theses:   
 https://version.helsinki.fi/cs/thesis-template   
 You can also download this as a ZIP-file from the download-button.   
 
