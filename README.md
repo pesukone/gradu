@@ -17,9 +17,9 @@ The idea is to distribute read-only Overleaf link to the students. The students 
 #### STEP 0 - Clone the thesis template
 
 One template for all thesis:
-https://version.helsinki.fi/cs/thesis-template
-( https://www.overleaf.com/read/hzgngkgshqwh )
-You can also download this as a ZIP-file from the download-button.
+https://version.helsinki.fi/cs/thesis-template  
+( https://www.overleaf.com/read/hzgngkgshqwh )  
+You can also download this as a ZIP-file from the download-button.  
 
 #### STEP 1 - BSc or MSc thesis?
 1) Select whether your are writing BSc (tkt for new, tktl for old) or MSc (csm for new, cs for old, dsm data science) thesis
