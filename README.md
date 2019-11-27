@@ -10,11 +10,13 @@ Contact the owners of this project if you wish to contribute to the development.
 
 ## Instructions for the students
 
-#### STEP 0 - Clone the thesis template
+#### STEP 0 - Copy the thesis template for yourself
 
 One template for all theses:   
 https://version.helsinki.fi/cs/thesis-template   
-You can also download this as a ZIP-file from the download-button.   
+You can download this template as a ZIP-file from the download-button.   
+You can also clone this template from the clone-button, as you would any Git-repository.  
+Either way, copy the whole repository for yourself.  
 
 #### STEP 1 - BSc or MSc thesis?
 1) Select whether your are writing BSc (tkt for new, tktl for old) or MSc (csm for new, cs for old, dsm data science) thesis
