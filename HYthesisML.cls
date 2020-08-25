@@ -575,6 +575,21 @@
 
 \AtBeginDocument{
 
+   % Biblatex doesn't use bibname or refname. Instead it overwrites it with its own value.
+   % These values must be fixed manually, and done after biblatex has been loaded.
+   \@ifpackageloaded{biblatex}{
+       \DefineBibliographyStrings{finnish}{%
+          bibliography = {L\"ahteet}
+       }
+       \DefineBibliographyStrings{swedish}{%
+          editor       = {red.},
+          editors      = {red.},
+	      bibliography = {Referenser}
+       }
+   }
+
+
+
     \newcounter{selfdefined}
     \newcounter{numberofpages}
     \newcounter{numberofappendixes}
