@@ -485,8 +485,8 @@
 %\renewcommand{\encltocname}{Liite}%
 }
 \addto\captionsswedish{%
-\renewcommand{\bibname}{Bibliografi}%
-\renewcommand{\refname}{Bibliografi}%
+\renewcommand{\bibname}{Referenser}%
+\renewcommand{\refname}{Referenser}%
 \renewcommand{\appendixname}{Bilaga}%
 \renewcommand{\appendixtocname}{Bilagor}%
 \renewcommand{\appendixpagename}{Bilagor}%
