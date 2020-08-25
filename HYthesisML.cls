@@ -366,6 +366,7 @@
       {\translate{department2018}}
     \renewcommand{\oppiaine}{{Koulutusohjelma --- Utbildningsprogram  --- Study programme}}
     \renewcommand{\getSubject}{\programme}
+	\providecommand{\track}{}
 \fi
 \if@tktl
     \newcommand{\level}%
@@ -380,6 +381,7 @@
     % VM: poistin "oppiaineeseen laitos" lisäämällä allaolevan
     \renewcommand{\department}{\programme}
     \renewcommand{\getSubject}{\programme}
+	\providecommand{\track}{}
 \fi
 \if@cs
     \renewcommand\subject{\translate{\track}}
