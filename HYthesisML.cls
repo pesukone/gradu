@@ -137,6 +137,8 @@
 
 \LoadClass{report}[2000/05/19]
 
+\RequirePackage[T1]{fontenc}
+
 \RequirePackage{latexsym}[1998/08/17 v2.2e Standard LaTeX package (lasy symbols)]
 
 \if@latin
