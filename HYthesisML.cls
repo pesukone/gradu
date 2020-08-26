@@ -137,6 +137,8 @@
 
 \LoadClass{report}[2000/05/19]
 
+\RequirePackage[T1]{fontenc}
+
 \RequirePackage{latexsym}[1998/08/17 v2.2e Standard LaTeX package (lasy symbols)]
 
 \if@latin
@@ -366,6 +368,7 @@
       {\translate{department2018}}
     \renewcommand{\oppiaine}{{Koulutusohjelma --- Utbildningsprogram  --- Study programme}}
     \renewcommand{\getSubject}{\programme}
+	\providecommand{\track}{}
 \fi
 \if@tktl
     \newcommand{\level}%
@@ -380,6 +383,7 @@
     % VM: poistin "oppiaineeseen laitos" lisäämällä allaolevan
     \renewcommand{\department}{\programme}
     \renewcommand{\getSubject}{\programme}
+	\providecommand{\track}{}
 \fi
 \if@cs
     \renewcommand\subject{\translate{\track}}
@@ -481,8 +485,8 @@
 %\renewcommand{\encltocname}{Liite}%
 }
 \addto\captionsswedish{%
-\renewcommand{\bibname}{Bibliografi}%
-\renewcommand{\refname}{Bibliografi}%
+\renewcommand{\bibname}{Referenser}%
+\renewcommand{\refname}{Referenser}%
 \renewcommand{\appendixname}{Bilaga}%
 \renewcommand{\appendixtocname}{Bilagor}%
 \renewcommand{\appendixpagename}{Bilagor}%
@@ -570,6 +574,21 @@
 
 
 \AtBeginDocument{
+
+   % Biblatex doesn't use bibname or refname. Instead it overwrites it with its own value.
+   % These values must be fixed manually, and done after biblatex has been loaded.
+   \@ifpackageloaded{biblatex}{
+       \DefineBibliographyStrings{finnish}{%
+          bibliography = {L\"ahteet}
+       }
+       \DefineBibliographyStrings{swedish}{%
+          editor       = {red.},
+          editors      = {red.},
+	      bibliography = {Referenser}
+       }
+   }
+
+
 
     \newcounter{selfdefined}
     \newcounter{numberofpages}
