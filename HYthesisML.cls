@@ -368,7 +368,7 @@
       {\translate{department2018}}
     \renewcommand{\oppiaine}{{Koulutusohjelma --- Utbildningsprogram  --- Study programme}}
     \renewcommand{\getSubject}{\programme}
-	\providecommand{\track}{}
+    \providecommand{\track}{}
 \fi
 \if@tktl
     \newcommand{\level}%
@@ -383,7 +383,7 @@
     % VM: poistin "oppiaineeseen laitos" lisäämällä allaolevan
     \renewcommand{\department}{\programme}
     \renewcommand{\getSubject}{\programme}
-	\providecommand{\track}{}
+    \providecommand{\track}{}
 \fi
 \if@cs
     \renewcommand\subject{\translate{\track}}
@@ -436,6 +436,12 @@
 \usepackage{amsmath, amssymb} % For better math
 \usepackage[footnotesize,bf]{caption}  % For more control over figure captions
 \usepackage{blindtext}
+\usepackage{everyshi}
+
+\newtoggle{mainmatter}
+\newtoggle{backmatter}
+\togglefalse{mainmatter}
+\togglefalse{backmatter}
 
 \newcommand{\frontmatter}{
     \setcounter{page}{1}
@@ -444,22 +450,28 @@
 
 
 \newcommand{\mainmatter}{
-    \cleardoublepage 
+    \toggletrue{mainmatter}
     \thispagestyle{empty}
     \pagenumbering{arabic}
     \setcounter{page}{1}
 }
 
 \newcommand{\backmatter}{%
-    \addtocounter{numberofappendixes}{1}
-    \setcounter{numberofpages}{\value{page}} 
+    \clearpage % needed so that mainmatter is fully flushed before turning off the counter
+    \togglefalse{mainmatter}
     
     \addtocontents{toc}{\cftpagenumbersoff{chapter}}
     \cleardoublepage
+    \toggletrue{backmatter}
 
     \titleformat{\chapter}{\large\bfseries}{\chaptertitlename\space\thechapter\newline}{0.5em}{\setcounter{page}{1}\pagenumbering{roman}\markboth{\chaptertitlename\space\thechapter}{\chaptertitlename \space\thechapter}\label{Appendix.\thechapter}\thispagestyle{empty}}
 %    \titleformat{\chapter}{\Huge\bfseries}{\chaptertitlename\space\thechapter\newline}{0.5em}{\setcounter{page}{1}\pagenumbering{arabic}\markboth{}{}\label{Appendix.\thechapter}}
     \thispagestyle{empty}
+}
+
+\EveryShipout{%
+    \iftoggle{mainmatter}{\stepcounter{numberofpages}}{}%
+    \iftoggle{backmatter}{\stepcounter{numberofappendixpages}{}}
 }
 
 
@@ -519,48 +531,22 @@
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}} %footnote symbols for one page only
 \MakePerPage{footnote}
-%----------------------------
-\AtEndPreamble{%
-
-% user command to ask for the value
-\providecommand{\recallcounter}[1]{\@ifundefined{stored@#1}{Rerun or fix for number of pages info in abstract}{\csname stored@#1\endcsname}}   
-% used at the aux
-
-\providecommand{\restorecounter}[2]{\expandafter\gdef\csname stored@#1\endcsname{#2}}
-
-\providecommand\recalltext[1]{\if{mytext@#1}\@nameuse{mytext@#1}\fi}
-}% end of end preamble
-
-
-\newcommand{\numberofpagesinformation}[1]{
-    \gdef\@numberofpagesinformation{#1}
-}
-\numberofpagesinformation{}
-    
-\newcommand{\pagesInformation}[1]{
-    \gdef\@pagesInformation{#1}
-}
-\pagesInformation{}
 
 %%%%%% Appendices %%%%%%%
 
 \newcounter{appendixPagesCounter}
-    \setcounter{appendixPagesCounter}{0}%
+\setcounter{appendixPagesCounter}{0}%
 
-    \let\oldappendix\appendix
-    \renewcommand{\appendix}[1]{
-        \addtocounter{appendixPagesCounter}{\value{page}}%
-        \typeout{***appendixPagesCounter \theappendixPagesCounter}
-
-
+\let\oldappendix\appendix
+\renewcommand{\appendix}[1]{
 %TM: This one set the last page of each appendix to 1, which kinda is not what one wants 
 %TM:-        \setcounter{page}{1}%
-        \chapter{#1}
-    }   
+    \chapter{#1}
+}
 
 
 \renewcommand{\appendices}{%
-    \setcounter{page}{-1}%
+    %\setcounter{page}{-1}%
 %  \setcounter{appendix}{1}%
 %  \newpage
 %  %\pagestyle{empty}
@@ -584,86 +570,27 @@
        \DefineBibliographyStrings{swedish}{%
           editor       = {red.},
           editors      = {red.},
-	      bibliography = {Referenser}
+          bibliography = {Referenser}
        }
    }
 
 
 
-    \newcounter{selfdefined}
     \newcounter{numberofpages}
-    \newcounter{numberofappendixes}
     \newcounter{numberofappendixpages}
 
-    \newcommand{\numberofpagesinfo}[1]{\gdef\@numberofpagesinfo{#1}}
-    \newcommand{\numberofappendixesinfo}[1]{\gdef\@numberofappendixesinfo{#1}}
-    \newcommand{\iffirstrun}{\@ifundefined{notfirstrun}}
-
-
-    \iffirstrun{%
-
-      \setcounter{selfdefined}{0}
-      \setcounter{numberofpages}{0}
-      \setcounter{numberofappendixes}{0}
-      \setcounter{numberofappendixpages}{0}
-
-      \numberofpagesinfo{}
-      \numberofappendixesinfo{}
-    }{%
-   
-         
-      \ifnumcomp{\value{selfdefined}}{=}{0}{%
-         % hidden setcounter cmds from aux for all counters above here
-         
-         \ifnumcomp{\value{numberofappendixes}}{=}{0}%  
-         % view together with same split in \atenddocument
-         {%
-         }{% appendixes exist, backmatter takes care of mainmatter pages
-            \appendixinfo{,\space\arabic{numberofappendixes}\space\@app\space(\arabic{numberofappendixpages}\space\@appno)}
-         } 
-    }{ % author defined cases handled by separate user command below
-    % write to aux all texts (note: lang spesific)
-    % to become available as author command elements
-    % on the second pdflatex run
-    
-    % only used as author command  
-    \providecommand{\setnumberofpagesinformation}[1]{
-        \addtocounter{selfdefined}{1}
-        \numberofpagesinformation{#1}
-    }
-
-  }
-}
+    \setcounter{numberofpages}{0}
+    \setcounter{numberofappendixpages}{0}
 }
 
-
-\newcounter{appendixpage}
 
 
 \AtEndDocument{%
+    \typeout{***AED Number of Appendices \thenumberofappendixpages}
+    \immediate\write\@auxout{\string\gdef\string\appendixCount{\thenumberofappendixpages}}
 
-    \iffirstrun{
-
-    }{
-        \addtocounter{appendixPagesCounter}{\value{page}}%
-        \typeout{***AED Number of Appendices \theappendixPagesCounter}
-        \immediate\write\@auxout{\string\gdef\string\appendixCount{\theappendixPagesCounter}}
-
-        \typeout{***AED Number of pages \thenumberofpages \pp}
-        \immediate\write\@auxout{\string\gdef\string\pagesCount{\thenumberofpages}}
-    }
-
-
-    \immediate\write\@auxout{\string\gdef\string\notfirstrun{}}
-
-        
-    \ifnumcomp{\value{numberofappendixes}}{=}{0}{%      
-        \setcounter{numberofpages}{\value{page}}
-        \numberofpagesinfo{\arabic{numberofpages}\space\@pp}
-    }{%
-        \setcounter{numberofappendixes}{\value{chapter}}
-        \addtocounter{numberofappendixpages}{\value{page}}
-    }
+    \typeout{***AED Number of pages \thenumberofpages \pp}
+    \immediate\write\@auxout{\string\gdef\string\pagesCount{\thenumberofpages}}
 }
 
 
