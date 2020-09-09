@@ -78,7 +78,8 @@ Appendix~\ref{appendix:model} on page~\pageref{appendix:model} contains some add
 
 \chapter{From tex to pdf}
 
-In Linux, run \texttt{pdflatex filename.tex} and \texttt{bibtex filename.tex} repeatedly until no more warnings are shown. This process can be automised using make-command.
+In Linux, run \texttt{pdflatex filename.tex} and \texttt{biber filename.tex} repeatedly until no more warnings are shown. This process can be automised using make-command.
+Note that normally we would be using \texttt{bibtex} command instead of \texttt{biber} but because of the biblatex package \texttt{biber} should be used.
  
 \chapter{Conclusions\label{chapter:conclusions}}
 
