@@ -4,7 +4,6 @@
 ## How to use this template?
 
 ### Instructions for teachers to modify this template
-Development version of this template is kept elsewhere and new releases will be directly pushed here.   
 Contact the owners of this project if you wish to contribute to the development.
 
 
