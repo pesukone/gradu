@@ -558,9 +558,7 @@
 }
 
 
-
-\AtBeginDocument{
-
+\AtEndPreamble{
    % Biblatex doesn't use bibname or refname. Instead it overwrites it with its own value.
    % These values must be fixed manually, and done after biblatex has been loaded.
    \@ifpackageloaded{biblatex}{
@@ -574,8 +572,9 @@
        }
    }
 
+}
 
-
+\AtBeginDocument{
     \newcounter{numberofpages}
     \newcounter{numberofappendixpages}
 
