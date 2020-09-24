@@ -1,17 +1,17 @@
 \ProvidesDictionary{translator-UHCSthesis-coverpage-dictionary}{English}
 \providetranslation{translation-UHCSthesis-coverpage-dictionary}{English}
 
-\providetranslation{tkt-bsc-level}{BSc thesis}
-\providetranslation{tktl-bsc-level}{BSc thesis}
-\providetranslation{msc-level-2020}{MSc thesis}
-\providetranslation{msc-level-2018}{MSc thesis}
-\providetranslation{msc-level-2017}{MSc thesis}
-\providetranslation{dsm-level}{MSc thesis}
+\providetranslation{tkt-bsc-level}{Bachelor's thesis}
+\providetranslation{tktl-bsc-level}{Bachelor's thesis}
+\providetranslation{msc-level-2020}{Master's thesis}
+\providetranslation{msc-level-2018}{Master's thesis}
+\providetranslation{msc-level-2017}{Master's thesis}
+\providetranslation{dsm-level}{Master's thesis}
 \providetranslation{sw-line}{Software Systems specialisation line}
 \providetranslation{alko-line}{Algorithms specialisation line}
 \providetranslation{bio-line}{Algorithmic bioinformatics specialisation line}
 \providetranslation{nodes-line}{Networking and Services specialisation line}
-\providetranslation{dsm-level}{MSc thesis}
+\providetranslation{dsm-level}{Master's thesis}
 
 \providetranslation{sw-line-2017}{Software systems subprogramme}
 \providetranslation{alko-line-2017}{Algorithms, Data Analytics and Machine Learning subprogramme}
