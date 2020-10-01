@@ -425,6 +425,8 @@
 \fi
 \if@seminar
     \newcommand{\level}{\translate{seminar}}
+    \newcommand{\programme}{}
+    \renewcommand{\getSubject}{\programme}
     \renewcommand{\oppiaine}{{Koulutusohjelma --- Utbildningsprogram  --- Study programme}}
 \fi
 
