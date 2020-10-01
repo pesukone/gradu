@@ -423,6 +423,10 @@
     %     \fi
     % }
 \fi
+\if@seminar
+    \newcommand{\level}{\translate{seminar}}
+    \renewcommand{\oppiaine}{{Koulutusohjelma --- Utbildningsprogram  --- Study programme}}
+\fi
 
 %% actual parameters from document
 
