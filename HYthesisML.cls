@@ -675,9 +675,9 @@
 \hypersetup{pageanchor=true}
 \setcounter{page}{-999}
 \label{title}
-\if@seminar
- \level{}
-\fi
+%\if@seminar
+% \level{}
+%\fi
 
 
 \onehalfspacing
