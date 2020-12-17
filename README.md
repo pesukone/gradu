@@ -18,7 +18,7 @@ You can also clone this template from the clone-button, as you would any Git-rep
 Either way, copy the whole repository for yourself.  
 
 #### STEP 1 - Bachelor's thesis, Master's thesis, or seminar report.
-1) Select whether your are writing Bachelor's thesis (tkt for new, tktl for old), Master's thesis (csm for new, cs for old, dsm data science) thesis, or a seminar report (seminar)
+1) Select whether your are writing Bachelor's thesis (tkt), Master's thesis (csm), or a seminar report (seminar)
 2) Select your language: finnish, english, or swedish
 3) If you are writing Master's thesis, select your line / track
 
