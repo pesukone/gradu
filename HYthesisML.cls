@@ -651,7 +651,7 @@
 \onehalfspacing
 
 \begin{center}
-\includegraphics[width=5cm]{HY-logo-ml.png}
+\includegraphics[width=5cm]{template/figures/HY-logo-ml.png}
 
 %\makeatletter
 \begin{large}
