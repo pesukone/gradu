@@ -7,38 +7,6 @@
 %% is to spread the style to uses at other departments as well, by
 %% making localisations easy. 
 %%
-%% The style class history:
-%% * modifications Veli Mäkinen, 2019
-%% * modifications Tomi Männistö, 2019
-%% * template for BSc and MSc by Niko Mäkitalo and Lea Kutvonen, 2019
-%% * tktltiki style and bibliography style by Anton Puolakka, 2002
-%% * inspired by that, a version by Department of Physics, 2017
-%% * template and style updates by Veli Mäkinen, 2018
-%% * technical renewal and enhancement by Lea Kutvonen, 2018
-%%   to be extended to similar looking word template as well
-%%
-%% Changes between policies in 2002 and 2018:
-%% * cover pages changed (also from Physics)
-%% * use of new (and old) curricula terms in titlepages and
-%%   in abstracts (level of theses, study programme and subject domain
-%%   within it, supervisor and examiner data for the needs of physical
-%%   sciences)
-%% * utf8 as default
-%% * mnemonic abbreviations in bibliographies have been abandoned,
-%%   instead choise between numberic and apacite styles 
-%%   are made optional
-%% * nomenclature shall be fixed soon (for Physics)
-%% * technical internal changes has been necessary for gaining 
-%%   stability of service for users: many packages have become obsolete
-%%   or changed a lot (very loose expectations have been given for
-%%   the required packages to ease the use on individual, separately
-%%   administered computers, watching out merely for major package
-%%   behaviour changes causing mismatches)
-%% * translator.sty was adopted to support dictionaries on terms
-%%   related to curricula and scientific area, allowing each
-%%   department to provide their own key phrases
-%%
-%%
 %%% This work may be distributed and/or modified under the
   % conditions of the LaTeX Project Public License, either version 1.3
   % of this license or (at your option) any later version.
