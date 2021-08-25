@@ -6,7 +6,7 @@
 In the HY-CS-main.tex file you will find the following STEPS 0--5. Bellow instructions what each STEP means and how to set up your thesis by following these STEPS.
 \vspace{0.5cm}
 
-\textbf{STEP 0 -- Clone the thesis template}
+\textbf{STEP 0 -- Access the thesis template}
 
 \begin{itemize}
 \item One template for all thesis types: \url{https://www.overleaf.com/read/hzgngkgshqwh}
@@ -15,7 +15,7 @@ In the HY-CS-main.tex file you will find the following STEPS 0--5. Bellow instru
 
 {\textbf{STEP 1 -- BSc or MSc thesis?}}
 \begin{enumerate}
-\item Select whether your are writing BSc (tkt for new, tktl for old) or MSc (csm for new, cs for old, dsm for data science) thesis.
+\item Select whether your are writing BSc (tkt) or MSc (csm for CS, dsm for data science) thesis.
 \item Select your language: finnish, english, or swedish.
 \item If you are writing MSc select your line / track.
 \end{enumerate}
@@ -24,15 +24,17 @@ In the HY-CS-main.tex file you will find the following STEPS 0--5. Bellow instru
 {\textbf{STEP 2 -- Set up your personal information}}
 
 \begin{enumerate}
-\item Write the working title of your thesis.
-\item Write your name to the author field.
-\item Write the names of your supervisors of the thesis.
+\item Specify the title of your thesis with \texttt{\textbackslash title\{\}}.
+\item Specify your name to the author field with \texttt{\textbackslash author\{\}}.
+\item Specify the names of your supervisors of the thesis with \texttt{\textbackslash supervisors\{\}}.
+\item Specify the keywords of the thesis with \texttt{\textbackslash keywords\{\}}.
+\item Specify the ACM classification terms of the thesis with \texttt{\textbackslash classification\{\}}. See \url{https://dl.acm.org/ccs} for more information.
 \end{enumerate}
 
-{\textbf{STEP 3 -- Write your abstract here}}
+{\textbf{STEP 3 -- Write your abstract}}
 
 \begin{itemize}
-\item You can also have the abstract in multiple languages with otherlanguages-environment. Bellow example how to add an english abstract to a thesis written in some other language than english: 
+\item You can have the abstract in multiple languages with the \texttt{otherlanguages} environment. The example below shows how to provide an english abstract: 
 
 \begin{verbatim}
 \begin{otherlanguage}{english} 
@@ -47,8 +49,9 @@ Your abstract text goes here.
 {\textbf{STEP 4 -- Writing your thesis}}
 
 \begin{enumerate}
-\item There are some writing instructions in [bsc/msc]\_[finnish/english]\_contents.tex files.
-\item You can delete the contents of [bsc/msc]\_[finnish/english]\_contents.tex file and write your thesis inside that file.
+\item There are some minimal contents and instructions in the [bsc/msc]\_[finnish/english]\_contents.tex files.
+\item You can delete the contents of the [bsc/msc]\_[finnish/english]\_contents.tex file and write your thesis inside that file.
+\item Remove this appendix from your thesis.
 \end{enumerate}
 
 {\textbf{STEP 5 -- Set your bibliography style}}
@@ -99,6 +102,6 @@ For the style of bibliography and citations, see some options in \url{https://ww
 
 This template has been prepared in LaTeX for usage with Overleaf. If your LaTeX source files contain no errors, then Overleaf produces the pdf file automatically.
 
-Of course, you are allowed to use the LaTeX template in other systems, but make sure you know how to produce the pdf file there. 
+You are allowed to use the LaTeX template and write your thesis in other systems, but make sure you know how to produce the pdf file there. 
 For example, in Linux, you typically need to execute the commands \texttt{pdflatex mainfile.tex} and \texttt{biber mainfile.tex} repeatedly until no more warnings are shown. This process can be automised using make-command. 
 Note that normally we would be using \texttt{bibtex} command instead of \texttt{biber} but because of the biblatex package \texttt{biber} should be used.
