@@ -96,8 +96,7 @@
 
 
 % Set supervisors, use the titles according to the thesis language
-% Prof. 
-% Dr. or in Finnish toht. or tri or FT, TkT, Ph.D. or in Swedish... 
+% in English Prof. or Dr., or in Finnish toht. or tri or FT, TkT, Ph.D. or in Swedish... 
 \supervisors{Prof.~D.U.~Mind, Dr.~O.~Why}
 
 
@@ -182,11 +181,7 @@ Finally, specify 1--3 ACM Computing Classification System (CCS) topics, as per \
 Each topic is specified with one path, as shown in the example below, and elements of the path separated with an arrow.
 Emphasis of each element individually can be indicated
 by the use of bold face for high importance or italics for intermediate
-level. 
-
-If you are writing your thesis in Latex, then examine the Latex file for commands that allow you to easily specify various elements of the thesis (e.g., its title or the names of the supervisors).
-
-If you are writing your thesis in Microsoft Word or similar software, then edit the various elements of the template directly.
+level.
 
 \end{abstract}
 \end{otherlanguage}
@@ -223,16 +218,21 @@ If you are writing your thesis in Microsoft Word or similar software, then edit 
 \backmatter
 \begin{appendices}
 
-%\input{instructions_english}
-\input{instructions_finnish}
+\appendix{Sample Appendix\label{appendix:sample}}
 
-\appendix{Sample Appendix\label{appendix:model}}
-usually starts on its own page, with the name and number of the appendix at the top. 
-The appendices here are just models of the table of contents and the presentation. Each appendix
+You can add an appendix to your thesis.
+
+An appendix starts on its own page, with the name and number of the appendix at the top. 
 Each appendix is paginated separately.
 
-In addition to complementing the main document, each appendix is also its own, independent entity.
-This means that an appendix cannot be just an image or a piece of programming, but the appendix must explain its contents and meaning.
+\appendix{Another Appendix\label{appendix:another}}
+
+You can have more than one appendices.
+
+%% another appendix
+\input{instructions_english}
+%% yet another appendix
+% \input{instructions_finnish}
 
 \end{appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

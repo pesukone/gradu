@@ -1,6 +1,7 @@
 
-\appendix{Template instructions}
+\appendix{Instructions for LaTex}
 
+\section{General Setup}
 
 In the HY-CS-main.tex file you will find the following STEPS 0--5. Bellow instructions what each STEP means and how to set up your thesis by following these STEPS.
 \vspace{0.5cm}
@@ -55,3 +56,49 @@ Your abstract text goes here.
 \begin{itemize}
 \item The default is Numbering alphabetic order, which should be used in most cases.
 \end{itemize}
+
+\section{Bibliography in Latex}
+
+The bibliography is defined in a separate .bib-file. For this template, it is named \texttt{bibliography.bib} and includes the following content:
+\begin{verbatim}
+@article{einstein,
+    author =       "Albert Einstein",
+    title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+        [{On} the electrodynamics of moving bodies]",
+    journal =      "Annalen der Physik",
+    volume =       "322",
+    number =       "10",
+    pages =        "891--921",
+    year =         "1905",
+    DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
+}
+ 
+@book{latexcompanion,
+    author    = "Michel Goossens and Frank Mittelbach and Alexander Samarin",
+    title     = "The \LaTeX\ Companion",
+    year      = "1993",
+    publisher = "Addison-Wesley",
+    address   = "Reading, Massachusetts"
+}
+ 
+@misc{knuthwebsite,
+    author    = "Donald Knuth",
+    title     = "Knuth: Computers and Typesetting",
+    url       = "http://www-cs-faculty.stanford.edu/%7Eknuth/abcde.html"
+}
+\end{verbatim}
+
+In the last reference url field the code \verb+%7E+ will translate into \verb+~+ once clicked in the final pdf.
+
+References are created using command \texttt{\textbackslash cite\{einstein\}}, showing as \citep{einstein}. Other examples: \citep{latexcompanion,knuthwebsite}.
+
+For the style of bibliography and citations, see some options in \url{https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles}.
+
+
+\section{Producing the thesis pdf}
+
+This template has been prepared in LaTeX for usage with Overleaf. If your LaTeX source files contain no errors, then Overleaf produces the pdf file automatically.
+
+Of course, you are allowed to use the LaTeX template in other systems, but make sure you know how to produce the pdf file there. 
+For example, in Linux, you typically need to execute the commands \texttt{pdflatex mainfile.tex} and \texttt{biber mainfile.tex} repeatedly until no more warnings are shown. This process can be automised using make-command. 
+Note that normally we would be using \texttt{bibtex} command instead of \texttt{biber} but because of the biblatex package \texttt{biber} should be used.
