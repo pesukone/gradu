@@ -6,21 +6,30 @@ The thesis should have an introduction chapter. Other chapters can be named acco
 
 \chapter{Figures and Tables}
 
+Besides text, you can use figures and tables in your thesis.
+
 \section{Figures}
-Figure~\ref{fig:logo} gives an example how to add figures to the document. Remember always to cite the figure in the main text.
+Figure~\ref{fig:logo} gives an example how to add figures to the document. 
+%
+Using figures is particularly useful to display plots of experimental results.
+
+Remember always to cite the figure in the main text. In addition, consider providing the figure with a descriptive caption.
 
 \begin{figure}[h!] 
-\centering 
+\begin{center}
 \includegraphics[width=0.3\textwidth]{HY-logo-ml.png}
 \caption{University of Helsinki flame-logo for Faculty of Science.\label{fig:logo}}
+\end{center}
 \end{figure}
 
 \section{Tables}
 
-Table~\ref{table:results} gives an example how to report experimental results. Remember always to cite the table in the main text. 
+Table~\ref{table:results} gives an example of a table that reports experimental results.
 
-\begin{table}
-\centering
+Remember always to cite the table in the main text. 
+
+\begin{table}[t!]
+\begin{center}
 \caption{Experimental results.\label{table:results}}
 \begin{tabular}{l||l c r} 
 Experiment & 1 & 2 & 3 \\ 
@@ -31,6 +40,7 @@ $A+B$ & 10.5 & 1.0 & 1.6 \\
 \hline
 %
 \end{tabular}
+\end{center}
 \end{table}
 
 \chapter{Citations}
