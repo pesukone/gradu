@@ -25,7 +25,7 @@ Either way, copy the whole repository for yourself.
 #### STEP 2 - Set up your personal information
 1) Write the working title of your thesis / report
 2) Write your name to the author field
-3) Write the names of your supervisors and examiners of the thesis (can be omitted for seminars)
+3) Write the names of your supervisors of the thesis (can be omitted for seminars)
 
 #### STEP 3 - Write your abstract here
 1) You can also have the abstract in multiple languages with:
