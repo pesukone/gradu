@@ -1,3 +1,5 @@
+.DS_Store
+
 HY-CS-main.aux
 HY-CS-main.bbl
 HY-CS-main.bcf
@@ -11,4 +13,3 @@ HY-CS-main.run.xml
 HY-CS-main.synctex.gz
 HY-CS-main.toc
 msc_english_contents.aux
-.DS_Store
