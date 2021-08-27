@@ -20,10 +20,11 @@
 
 \documentclass[english,twoside,censored,csm,software-track-2020]{HYthesisML} 
 
-% In theses, open new chapters only at right page.
-% For other types of documents, may ask "openany" in document.
-\PassOptionsToClass{openright,twoside,a4paper}{report}
-%\PassOptionsToClass{openany,twoside,a4paper}{report}
+
+% If wanted, open new chapters only at right page.
+% By default, "openany".
+%\PassOptionsToClass{openright,twoside,a4paper}{report}
+\PassOptionsToClass{openany,twoside,a4paper}{report}
 
 \usepackage{csquotes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,16 +89,12 @@
 %% Replace parameters with your information.
 \title{Title}
 
-% TM: Contributors to template editors now listed in the beginning of the file in comments
 \author{Firstname Lastname}
 \date{\today}
-
-
 
 % Set supervisors, use the titles according to the thesis language
 % in English Prof. or Dr., or in Finnish toht. or tri or FT, TkT, Ph.D. or in Swedish... 
 \supervisors{Prof.~D.U.~Mind, Dr.~O.~Why}
-
 
 \keywords{algorithms, data structures}
 \additionalinformation{\translate{\track}}
@@ -149,45 +146,20 @@
 % Generate title page.
 \maketitle
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% STEP 3:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Write your abstract to be positioned here.
+%% Write your abstract in the separate file, to be positioned here.
 %% You can make several abstract pages (if you want it in different languages),
 %% in which case you should also define the language of the abstract,
 %% as below.
 
-% \begin{abstract}{finnish}
-
-% Tämä dokumentti on tarkoitettu Helsingin yliopiston tietojenkäsittelytieteen osaston opin\-näyt\-teiden ja harjoitustöiden ulkoasun ohjeeksi ja mallipohjaksi. Ohje soveltuu kanditutkielmiin, ohjelmistotuotantoprojekteihin, seminaareihin ja maisterintutkielmiin. Tämän ohjeen lisäksi on seurattava niitä ohjeita, jotka opastavat valitsemaan kuhunkin osioon tieteellisesti kiinnostavaa, syvällisesti pohdittua sisältöä.
-
-
-% Työn aihe luokitellaan  
-% ACM Computing Classification System (CCS) mukaisesti, 
-% ks.\ \url{https://dl.acm.org/ccs}. 
-% Käytä muutamaa termipolkua (1--3), jotka alkavat juuritermistä ja joissa polun tarkentuvat luokat erotetaan toisistaan oikealle osoittavalla nuolella.
-
-% \end{abstract}
-
-\begin{otherlanguage}{english}
-\begin{abstract}
-Write your abstract here.
-
-In addition, make sure that all the entries in this form are completed.
-
-Finally, specify 1--3 ACM Computing Classification System (CCS) topics, as per \url{https://dl.acm.org/ccs}.
-Each topic is specified with one path, as shown in the example below, and elements of the path separated with an arrow.
-Emphasis of each element individually can be indicated
-by the use of bold face for high importance or italics for intermediate
-level.
-
-\end{abstract}
-\end{otherlanguage}
+\include{Ch.00_Abstract}
 
 % Place ToC
-\newpage
+%\newpage
 \mytableofcontents
+
 \mainmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,20 +168,23 @@ level.
 %% Your actual text starts here. You shouldn't mess with the code above the line except
 %% to change the parameters. Removing the abstract and ToC commands will mess up stuff.
 %%
-%% You may wish to include material to avoid browsing the definitions
-%% above. Command \include{file} includes the file of name file.tex.
-%% As a side effect, subsequent inclusions may force a page break.
+%% Command \include{file} includes the file of name file.tex.
+%% A new page will be created at every \include command, 
+%% which makes it appropriate to use it for large entities such as book chapters. Cannot be nested.
+%% It is useful for a big project, as changing one of the include targets 
+%% won't force the regeneration of the outputs of all the rest.
+%% Alternatively, \input is a more lower level macro 
+%% which simply inputs the content of the given file like it was copy&pasted there manually.
 
-% BSc instructions
-%\include{bsc_finnish_contents}
-%\include{bsc_english_contents}
-% MSc instructions
-%\include{msc_finnish_contents}
-\include{msc_english_contents}
+\include{Ch.10_Introduction}
+\include{Ch.20_Methods}
+\include{Ch.30_Results}
+\include{Ch.40_Discussion}
+\include{Ch.50_Conclusions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cleardoublepage                          %fixes the position of bibliography in bookmarks
-\phantomsection
+%\cleardoublepage                          %fixes the position of bibliography in bookmarks
+%\phantomsection
 \addcontentsline{toc}{chapter}{\bibname}  % This lines adds the bibliography to the ToC
 \printbibliography
 
@@ -217,17 +192,17 @@ level.
 \backmatter
 \begin{appendices}
 
-\appendix{Sample Appendix\label{appendix:sample}}
-
-You can add one or more appendices to your thesis.
-
-An appendix starts on its own page, with the name and number of the appendix at the top. 
-Each appendix is paginated separately.
-
+%% A sample Appendix
+\include{Ch.90_Appendix_1}
 %% another appendix
-\input{instructions_english}
+\include{instructions/instructions_english}
 %% yet another appendix
-\input{instructions_finnish}
+\include{instructions/instructions_finnish}
+
+% BSc instructions
+%\include{instructions/bsc_finnish_contents}
+%\include{instructions/bsc_english_contents}
+
 
 \end{appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

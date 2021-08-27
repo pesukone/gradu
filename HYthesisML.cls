@@ -47,13 +47,14 @@
 \DeclareOption{alko-line}{\def\track{alko-line}}
 \DeclareOption{nodes-line}{\def\track{nodes-line}}
 \DeclareOption{bio-line}{\def\track{bio-line}}
-\DeclareOption{sw-line-2017}{\def\track{sw-line-2017}}
-\DeclareOption{alko-line-2017}{\def\track{alko-line-2017}}
-\DeclareOption{nodes-line-2017}{\def\track{nodes-line-2017}}
-\DeclareOption{bio-line-2017}{\def\track{bio-line-2017}}
-\DeclareOption{sw-track-2018}{\def\track{sw-track-2018}}
-\DeclareOption{alko-track-2018}{\def\track{alko-track-2018}}
-\DeclareOption{nodes-track-2018}{\def\track{nodes-track-2018}}
+%- should some of these be removed? TM2021
+% \DeclareOption{sw-line-2017}{\def\track{sw-line-2017}}
+% \DeclareOption{alko-line-2017}{\def\track{alko-line-2017}}
+% \DeclareOption{nodes-line-2017}{\def\track{nodes-line-2017}}
+% \DeclareOption{bio-line-2017}{\def\track{bio-line-2017}}
+% \DeclareOption{sw-track-2018}{\def\track{sw-track-2018}}
+% \DeclareOption{alko-track-2018}{\def\track{alko-track-2018}}
+% \DeclareOption{nodes-track-2018}{\def\track{nodes-track-2018}}
 \DeclareOption{software-track-2020}{\def\track{software-track-2020}}
 \DeclareOption{algorithms-track-2020}{\def\track{algorithms-track-2020}}
 \DeclareOption{networking-track-2020}{\def\track{networking-track-2020}}
@@ -93,11 +94,6 @@
 \if@defaulttypesize
   \PassOptionsToClass{12pt}{report}
 \fi
-%TM- changed a4page->a4paper \PassOptionsToClass{openright,twoside,a4page}{report}
-%TM: Moved to ...main.tex
-%\PassOptionsToClass{openright,twoside,a4paper}{report}
-% In theses, open new chapters only at right page.
-% For other types of documents, may ask "openany" in document.
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 % Report class takes care of any errors in options.
@@ -270,7 +266,7 @@
 
 %%%% trilanguage handling
 \RequirePackage{translator}  % see the 3 files of translator-UHCSthesis
-\usedictionary{translator-UHCSthesis-coverpage-dictionary}
+\usedictionary{template/translator-UHCSthesis-coverpage-dictionary}
 
 %%%%%% Define commands for filling abstract
 %%%%% For form texts
