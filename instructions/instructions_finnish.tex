@@ -4,10 +4,10 @@
 
 \section{Ensiaslkeleet}
 
-\texttt{HY-CS-main.tex} tiedosto sisältää viisi askelta STEPS 0--5. Alla on kuvattu, mitä nämä askeleet tarkoittavat ja miten niitä seuraamalla luot itsellesi tutkielmapohjan.
+\texttt{HY-CS-main.tex} tiedosto sisältää viisi askelta STEPS 0--5. Alla on kuvattu, mitä nämä askeleet tarkoittavat ja miten niitä seuraamalla luot pohjan tutkielmallesi.
 \vspace{0.5cm}
 
-\textbf{STEP 0 -- Kopioi itsellesi tutkielmapohja}
+\textbf{STEP 0 -- Kopioi tutkielmapohja}
 
 \begin{itemize}
 \item Hae tutkielmapohja uuteen Overleaf-projektiin. Tämä käy helpoiten seuraavasti:
@@ -23,8 +23,7 @@
 
 {\textbf{STEP 1 -- BSc vai MSc tutkielma?}}
 \begin{enumerate}
-\item Valitse (tiedostossa \texttt{HY-CS-main.tex}) oletko tekemässä BSc (tkt) vai MSc (csm tietojenkäsittely).
-tutkielman.
+\item Valitse (tiedostossa \texttt{HY-CS-main.tex}) oletko tekemässä BSc (tkt) vai MSc (csm tietojenkäsittely) tutkielmaa.
 \item Valitse kieli jolla kirjoitat tutkielman: \texttt{finnish}, \texttt{english} tai \texttt{swedish}.
 \item Jos olet kirjoittamassa maisterintutkielmaa, valitse linja/opintosuunta.
 \end{enumerate}
@@ -42,8 +41,9 @@ tutkielman.
 
 {\textbf{STEP 3 -- Kirjoita tiivistelmä}}
 
-\begin{itemize}
-\item Voit kirjoittaa tiivistelmän (koko tiivistelmäsivu) eri kielillä \texttt{otherlanguages}-ym\-pä\-ris\-tön avulla. Alla esimerkki jolla kirjoitat englanninkielisen tiivistelmän muulla kuin englannin kielellä kirjoitettuun tutkielmaan:
+%\begin{itemize}
+%\item 
+Voit kirjoittaa tiivistelmän (koko tiivistelmäsivu) eri kielillä \texttt{otherlanguages}-ym\-pä\-ris\-tön avulla. Alla esimerkki jolla kirjoitat englanninkielisen tiivistelmän muulla kuin englannin kielellä kirjoitettuun tutkielmaan:
 
 \begin{verbatim}
 \begin{otherlanguage}{english} 
@@ -53,13 +53,13 @@ Your abstract text goes here.
 \end{otherlanguage}
 \end{verbatim}
 
-\end{itemize}
+%\end{itemize}
 
 {\textbf{STEP 4 -- Kirjoita tutkielma}}
 
 \begin{enumerate}
 \item Kirjoittamisesta Latexilla löydät hieman ohjeita alempaa.
-\item Poista tämä liite, tai kommentoi.
+\item Poista tämä liite ja muu ohjeistus tutkielmastasi, esim. kommentoimalla.
 \end{enumerate}
 
 {\textbf{STEP 5 -- Aseta kirjallisuuslähdeluettelon tyyli}}
@@ -113,13 +113,14 @@ Kirjallisuuslähteet ylläpidetään erillisessä .bib-tiedostossa. Tässä tutk
 \end{figure}
 
 Viitteet kirjallisuuslähteisiin muodostetaan komennolla \texttt{\textbackslash citep\{einstein\}}, josta generoituu tekstiin valitun viittaustyylin mukaisesti muotoiltu viite \citep{einstein}, tai \texttt{\textbackslash citep\{latexcompanion,knuth99\}}, josta tekstiin puolestaan generoituu \citep{latexcompanion,knuth99}. 
-Voit kirjoittaa (katso miltä nämä näyttävät Latex lähdekoodissa) \citep{einstein} viitataksesi julkaisuun, jonka on kirjoittanut \citeauthor{einstein} vuonna \citeyear{einstein}, kun vain lähde \citet{einstein} on oikein lisättynä kirjallisuuslähdetiedostossa.
+Voit esimerkiksi kirjoittaa \citep{einstein} viitataksesi julkaisuun, jonka on kirjoittanut \citeauthor{einstein} vuonna \citeyear{einstein}, kun vain lähde \citet{einstein} on oikein lisättynä kirjallisuuslähdetiedostossa (katso miltä nämä näyttävät Latex lähdekoodissa).
 
 Tekstissä viitatut kirjallisuuslähteet tulevat automaattisesti viiteluetteloon. Kirjallisuuslähteiden tietojen oikeellisuus ja yhdenmukaisuus .bib-tiedostossa vaikuttavat luonnollisesti siihen, miten tiedot tutkielmassa näyttäytyvät. Tämä on syytä huomioida, sillä esim.\ verkosta valmiiksi {Bib\TeX} muodossa löytyvien tietojen täydellisyyten tai samanmuotoisuuteen ei pidä sokeasti luottaa.  
 
 
-Keskustele viittaustyylin valinnasta ohjaajan kanssa. Joitain vaihtoehtoja on osoitteessa:\\ 
-\url{https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles}.
+Keskustele viittaustyylin valinnasta ohjaajan kanssa. 
+%Joitain vaihtoehtoja on osoitteessa:\\ 
+%\url{https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles}.
 %\url{https://www.sharelatex.com/learn/Bibtex_bibliography_styles}.
 
 \section{Joitain ohjeita Latexilla kirjoittamiseen}
@@ -130,7 +131,7 @@ Ohjaajan kanssa on hyvä keskustella aikaisessa vaiheessa työn rakenteesta.
 Yksityiskohtaisia ohjeita Latexin käyttämäsestä saa parhaiten hakemalla verkosta, esim. haku englanniksi "Overleaf table positioning" tuottaa oletettavasti aika toimivan vastauksen.
 
 \section{Kuvat}
-Kuva~\ref{fig:logo-fi} toimii esimerkkinä kuvan lisäämisestä työhön. Muista myös viitata jokaiseen kuvaan tekstissä. 
+Kuva~\ref{fig:logo-fi} toimii esimerkkinä kuvan lisäämisestä työhön (katso tarkemmin mallia Latex lähdekoodista). Muista myös viitata jokaiseen kuvaan tekstissä. 
 
 \begin{figure}[ht] % remove [h!] for automatic placement, which is probably better for a thesis with more text on page
 \centering 
