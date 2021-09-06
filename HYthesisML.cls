@@ -7,38 +7,6 @@
 %% is to spread the style to uses at other departments as well, by
 %% making localisations easy. 
 %%
-%% The style class history:
-%% * modifications Veli Mäkinen, 2019
-%% * modifications Tomi Männistö, 2019
-%% * template for BSc and MSc by Niko Mäkitalo and Lea Kutvonen, 2019
-%% * tktltiki style and bibliography style by Anton Puolakka, 2002
-%% * inspired by that, a version by Department of Physics, 2017
-%% * template and style updates by Veli Mäkinen, 2018
-%% * technical renewal and enhancement by Lea Kutvonen, 2018
-%%   to be extended to similar looking word template as well
-%%
-%% Changes between policies in 2002 and 2018:
-%% * cover pages changed (also from Physics)
-%% * use of new (and old) curricula terms in titlepages and
-%%   in abstracts (level of theses, study programme and subject domain
-%%   within it, supervisor and examiner data for the needs of physical
-%%   sciences)
-%% * utf8 as default
-%% * mnemonic abbreviations in bibliographies have been abandoned,
-%%   instead choise between numberic and apacite styles 
-%%   are made optional
-%% * nomenclature shall be fixed soon (for Physics)
-%% * technical internal changes has been necessary for gaining 
-%%   stability of service for users: many packages have become obsolete
-%%   or changed a lot (very loose expectations have been given for
-%%   the required packages to ease the use on individual, separately
-%%   administered computers, watching out merely for major package
-%%   behaviour changes causing mismatches)
-%% * translator.sty was adopted to support dictionaries on terms
-%%   related to curricula and scientific area, allowing each
-%%   department to provide their own key phrases
-%%
-%%
 %%% This work may be distributed and/or modified under the
   % conditions of the LaTeX Project Public License, either version 1.3
   % of this license or (at your option) any later version.
@@ -79,13 +47,14 @@
 \DeclareOption{alko-line}{\def\track{alko-line}}
 \DeclareOption{nodes-line}{\def\track{nodes-line}}
 \DeclareOption{bio-line}{\def\track{bio-line}}
-\DeclareOption{sw-line-2017}{\def\track{sw-line-2017}}
-\DeclareOption{alko-line-2017}{\def\track{alko-line-2017}}
-\DeclareOption{nodes-line-2017}{\def\track{nodes-line-2017}}
-\DeclareOption{bio-line-2017}{\def\track{bio-line-2017}}
-\DeclareOption{sw-track-2018}{\def\track{sw-track-2018}}
-\DeclareOption{alko-track-2018}{\def\track{alko-track-2018}}
-\DeclareOption{nodes-track-2018}{\def\track{nodes-track-2018}}
+%- should some of these be removed? TM2021
+% \DeclareOption{sw-line-2017}{\def\track{sw-line-2017}}
+% \DeclareOption{alko-line-2017}{\def\track{alko-line-2017}}
+% \DeclareOption{nodes-line-2017}{\def\track{nodes-line-2017}}
+% \DeclareOption{bio-line-2017}{\def\track{bio-line-2017}}
+% \DeclareOption{sw-track-2018}{\def\track{sw-track-2018}}
+% \DeclareOption{alko-track-2018}{\def\track{alko-track-2018}}
+% \DeclareOption{nodes-track-2018}{\def\track{nodes-track-2018}}
 \DeclareOption{software-track-2020}{\def\track{software-track-2020}}
 \DeclareOption{algorithms-track-2020}{\def\track{algorithms-track-2020}}
 \DeclareOption{networking-track-2020}{\def\track{networking-track-2020}}
@@ -125,11 +94,6 @@
 \if@defaulttypesize
   \PassOptionsToClass{12pt}{report}
 \fi
-%TM- changed a4page->a4paper \PassOptionsToClass{openright,twoside,a4page}{report}
-%TM: Moved to ...main.tex
-%\PassOptionsToClass{openright,twoside,a4paper}{report}
-% In theses, open new chapters only at right page.
-% For other types of documents, may ask "openany" in document.
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 % Report class takes care of any errors in options.
@@ -302,7 +266,7 @@
 
 %%%% trilanguage handling
 \RequirePackage{translator}  % see the 3 files of translator-UHCSthesis
-\usedictionary{translator-UHCSthesis-coverpage-dictionary}
+\usedictionary{template/translator-UHCSthesis-coverpage-dictionary}
 
 %%%%%% Define commands for filling abstract
 %%%%% For form texts
@@ -624,26 +588,26 @@
 \setcounter{page}{-998}
 \label{in}
 \thispagestyle{empty}
-\if@censored 
- {
-    \par
-    {\bf\supervisorslabel}\par
-%TM: parindent only indents the first line -> use \leftskip within {}
-%    {\addtolength{\parindent}{2em} 
-    {\leftskip=2em
-     \@supervisors
-  %  \addtolength{\parindent}{-2em}}
-     \par
-    }
+% \if@censored 
+%  {
+%     \par
+%     {\bf\supervisorslabel}\par
+% %TM: parindent only indents the first line -> use \leftskip within {}
+% %    {\addtolength{\parindent}{2em} 
+%     {\leftskip=2em
+%      \@supervisors
+%   %  \addtolength{\parindent}{-2em}}
+%      \par
+%     }
     
-    \par
-    {\bf\examinerlabel}\par
-    {\leftskip=2em
-     \@examiners
-     \par
-    }
-}
-\fi
+%     \par
+%     {\bf\examinerlabel}\par
+%     {\leftskip=2em
+%      \@examiners
+%      \par
+%     }
+% }
+% \fi
 
 \vspace{4.0cm}
     \par
@@ -683,7 +647,7 @@
 \onehalfspacing
 
 \begin{center}
-\includegraphics[width=5cm]{HY-logo-ml.png}
+\includegraphics[width=5cm]{template/figures/HY-logo-ml.png}
 
 %\makeatletter
 \begin{large}
