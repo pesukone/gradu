@@ -60,6 +60,14 @@
 % Please remove the boldface from the volume and number fields:
 \DeclareFieldFormat[article]{volume}{#1}
 \DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+% Now this generated format volume.(number). How to remove the dot? (and so on with some adjustments):
+\renewbibmacro*{volume+number+eid}{%
+  \setunit{\addcomma\space}% 
+  \printfield{volume}%
+  %\setunit*{\addnbspace\addthinspace}% <-- Adjust spacing here
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}}
 
 
 %% Block of definitions for fonts and packages for picture management.
