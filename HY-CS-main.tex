@@ -52,6 +52,15 @@
 % remove the punctuation between author names in Bibliography 
 %\renewcommand{\revsdnamepunct}{ }
 
+% Asked chat.openai.com: I'm using biblatex package, but it prints odd format volume.number in reference list, while this should be volume (number). How to fix this?
+%Answer (shortened):
+% Redefine the volume and number format
+%\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
+%\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+% Please remove the boldface from the volume and number fields:
+\DeclareFieldFormat[article]{volume}{#1}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
 
 %% Block of definitions for fonts and packages for picture management.
 %% In some systems, the figure packages may not be happy together.
