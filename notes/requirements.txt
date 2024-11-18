@@ -1,0 +1,99 @@
+CM/Rec 2017
+
+Reasons for considering e-voting:
+- votes don't have to be cast from designated places
+- easier voting from abroad
+- greater accessibility (for disabled people for example)
+- potential for greater voter turnout
+- adopting new technological developments (eisss)
+- reduced costs in the long term
+- faster and more reliable delivery of election results
+- improving service by offering multiple ways to vote
+
+The underlying assumption of these requirements is that the public has confidence in the authorities managing the elections!!!
+
+Requirements:
+- security
+- reliability
+- efficiency
+- technical robustness
+- openness to independent verification
+- accessibility
+
+The previous Rec(2004)11 no longer applies!!!
+
+Recommendations:
+- respect the principles of democracy
+- do risk assessment and appropriate countermeasures, especially when it comes to risk specific to e-voting
+- use these (or newer) recommendations to review the policy and practice of e-voting when it has been implemented
+- share experiences
+- ensure that the recommendations are widely accessible
+
+Requirements in detail:
+- universal suffrage
+  - voting system interface should be understandable to the voters
+  - all practical measures to improve accessibility of the system should be taken 
+  - universal accessibility is the prerequisite for retiring other means of voting
+  - the system should explicitly notify the voters that they are voting in a real election (kek)
+
+- equal suffrage:
+  - official information relating to voting should be presented equally across the voting channels
+  - when using both electronic and non-electronic voting channels, all votes should be aggregated and calculated securely
+  - the voters must be distinguished from each other without errors
+  - the system must not be accessible without authentication
+  - the system must allow voters to only cast the appropriate number of votes, and only those votes are included in the election result
+
+- free suffrage
+  - the voting system or any inappropriate influence must not affect the intention of the voter
+  - the information and the ballot presented to the voter must be authentic
+  - the system must not guide the voter to go through any part of the process accidentally, it must ask for confirmation
+  - the system must allow the voter to cast an empty ballot
+  - the system must notify the voter if they're about to cast an invalid vote
+  - the voter must be able to verify that the vote being cast represents their intention, and is not altered
+  - the system should confirm that the vote has been cast
+  - the system must prove that all valid votes are included when counting the election result, and this evidence should not depend on the system itself
+  - the system must prove credibly that only votes cast by eligible voters are included when counting the election result, and this evidence should not depend on the system itself
+
+- secret suffrage
+  - the secrecy of the vote must be ensured throughout the election
+  - the system must not store unnecessary personal data
+  - unauthorized parties must not gain access to the authentication data handled by the system
+  - unauthorized parties must not gain access to voters' registers(?)
+  - the system must not provide evidence of any the votes to external parties
+  - the numbers of votes having been cast must not be disclosed to anyone before voting has ended
+  - any previous choices the voter has made and erased before issuing the final vote must remain secret
+  - any single votes must not be traceable back to the voters
+
+- regulatory and organisational requirements
+  - electronic voting must be introduced gradually
+  - legislative changes must preceed the introduction of e-voting
+  - the responsibilities for the systems and control over them must be legislated
+  - anyone must be allowed to observe the counting of the votes
+
+- transparency and observation
+  - all aspects of e-voting must be transparent
+  - before the election, the public must be informed about:
+    - the steps required for voting
+    - how the e-voting system works and how it's used
+    - the timetable for e-voting
+  - the different components of the e-voting system must be disclosed for verification and certification
+  - anyone must be allowed to observe and comment on electronic elections (to the extent allowed by law)
+  - open standards must be used for interoperability of different components of the voting system
+
+- accountability
+  - technical, evaluation and certification requirements must be developed and kept up to date
+  - an independent party must periodically evaluate that the voting system fulfills its requirements
+  - the certificate issued to the system must have safeguards which prevent its modification after the fact
+  - the system must be made auditable by an open and comprehensive audit system, which reports on potential issues and threats
+
+- reliability and security of the system
+  - the system must comply with its requirements even under failures or attacks. The availability, reliability, usability and security of the voting system must be guaranteed
+  - access to the central infrastructure of the election system and the data handled by it must be regulated
+  - the genuiness and the correct operation of the voting system must be ensured before the election
+  - software must be kept up to date
+  - votes must be encrypted if they ever leave controlled environments
+  - votes and voter information must be kept secret before counting
+  - all cryptographic material must be handled securely
+  - if something that could threaten the integrity of the system happens, the operators must inform electoral officials
+  - the authenticity, availability and integrity of the voters' registers and candidate lists must not be compromised. They must come from authenticated data sources. Data protection must be respected.
+  - votes which are affected by irregularities must be identifiable
